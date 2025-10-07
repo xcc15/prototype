@@ -38,7 +38,7 @@ def init_data_files():
             'ID': [str(uuid.uuid4()) for _ in range(3)],
             'Date': ['2023-10-01', '2023-10-15', '2024-01-20'],
             'Barangay': ['Tondo', 'Sta. Mesa', 'Paco'],
-            'Disease_Name': ['Dengue', 'Flu', 'COVID-19'],
+            'Disease_Name': ['Lepotospirosis', 'Dengue Fever', 'Rabies'],
             'Cases': [50, 150, 20],
             'Status': ['Outbreak', 'Monitoring', 'Stable']
         }
@@ -96,7 +96,7 @@ init_data_files()
 def render_sidebar():
     """Renders the navigation links and login/logout (buttons on the left side)."""
     with st.sidebar:
-        st.title("🇵🇭 City Disease Tracker")
+        st.title("Paolo Aguilar")
         st.write("---")
 
         st.header("Public Access")
@@ -152,7 +152,7 @@ def render_sidebar():
 
 def render_dashboard():
     """Renders the public-facing dashboard with data visualizations and map placeholder."""
-    st.title("📊 Public Disease Dashboard: City Overview")
+    st.title("Dashboard")
     st.info("This is the public view, showing aggregate and anonymized data.")
 
     df = load_data(DATA_FILE)
